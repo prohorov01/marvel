@@ -2,6 +2,7 @@ import { PureComponent } from "react";
 import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import MarvelService from "../../services/MarvelService";
+import PropTypes from "prop-types";
 import "./charList.scss";
 
 class CharList extends PureComponent {
@@ -55,7 +56,19 @@ class CharList extends PureComponent {
       loading: false,
     });
   };
+  itemRefs = [];
 
+  setRef = (ref) => {
+    this.itemRefs.push(ref);
+  };
+
+  focusOnItem = (id) => {
+    this.itemRefs.forEach((item) =>
+      item.classList.remove("char__item_selected")
+    );
+    this.itemRefs[id].classList.add("char__item_selected");
+    this.itemRefs[id].focus();
+  };
   renderItems(arr) {
     const items = arr.map((item) => {
       let imgStyle = { objectFit: "cover" };
@@ -69,6 +82,8 @@ class CharList extends PureComponent {
       return (
         <li
           className="char__item"
+          tabIndex={0}
+          ref={this.setRef}
           key={item.id}
           onClick={() => this.props.onCharSelected(item.id)}
         >
@@ -108,5 +123,8 @@ class CharList extends PureComponent {
     );
   }
 }
+CharList.propTypes = {
+  onCharSelected: PropTypes.func.isRequired,
+};
 
 export default CharList;
