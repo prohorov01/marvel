@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/marvel.github.io/static/css/main.c4778216.chunk.css",
+    "main.js": "/marvel.github.io/static/js/main.061b15a6.chunk.js",
+    "main.js.map": "/marvel.github.io/static/js/main.061b15a6.chunk.js.map",
+    "runtime-main.js": "/marvel.github.io/static/js/runtime-main.609bdf91.js",
+    "runtime-main.js.map": "/marvel.github.io/static/js/runtime-main.609bdf91.js.map",
+    "static/js/2.a26fdf47.chunk.js": "/marvel.github.io/static/js/2.a26fdf47.chunk.js",
+    "static/js/2.a26fdf47.chunk.js.map": "/marvel.github.io/static/js/2.a26fdf47.chunk.js.map",
+    "index.html": "/marvel.github.io/index.html",
+    "static/css/main.c4778216.chunk.css.map": "/marvel.github.io/static/css/main.c4778216.chunk.css.map",
+    "static/js/2.a26fdf47.chunk.js.LICENSE.txt": "/marvel.github.io/static/js/2.a26fdf47.chunk.js.LICENSE.txt",
+    "static/media/error.42292aa1.gif": "/marvel.github.io/static/media/error.42292aa1.gif",
+    "static/media/mjolnir.61f31e18.png": "/marvel.github.io/static/media/mjolnir.61f31e18.png",
+    "static/media/vision.067d4ae1.png": "/marvel.github.io/static/media/vision.067d4ae1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.609bdf91.js",
+    "static/js/2.a26fdf47.chunk.js",
+    "static/css/main.c4778216.chunk.css",
+    "static/js/main.061b15a6.chunk.js"
+  ]
+}
