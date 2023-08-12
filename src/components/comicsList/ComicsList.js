@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import { Link } from "react-router-dom";
 import useMarvelService from "../../services/MarvelService";
 import Spinner from "../spinner/Spinner";
@@ -86,4 +86,4 @@ const ComicsList = () => {
   );
 };
 
-export default ComicsList;
+export default memo(ComicsList);

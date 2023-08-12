@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import useMarvelService from "../../services/MarvelService";
 import setContent from "../../utils/setContent";
 
@@ -84,4 +84,4 @@ const View = ({ data }) => {
   );
 };
 
-export default RandomChar;
+export default memo(RandomChar);

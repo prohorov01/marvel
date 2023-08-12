@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import PropTypes from "prop-types";
 import useMarvelService from "../../services/MarvelService";
 import setContent from "../../utils/setContent";
@@ -28,11 +28,6 @@ const CharInfo = (props) => {
   const onCharLoaded = (char) => {
     setchar(char);
   };
-
-  // const skeleton = char || loading || error ? null : <Skeleton />;
-  // const errorMessage = error ? <ErrorMessage /> : null;
-  // const spinner = loading ? <Spinner /> : null;
-  // const content = !(loading || error || !char) ? <View char={char} /> : null;
 
   return <div className="char__info">{setContent(process, View, char)}</div>;
 };
@@ -89,4 +84,4 @@ CharInfo.propTypes = {
   charId: PropTypes.number,
 };
 
-export default CharInfo;
+export default memo(CharInfo);
