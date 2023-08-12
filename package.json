@@ -23,7 +23,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build"
   },
-  "homepage": "https://prohorov01.github.io/marvel",
+  "homepage": "https://prohorov01.github.io/marvel/",
   "eslintConfig": {
     "extends": [
       "react-app",
