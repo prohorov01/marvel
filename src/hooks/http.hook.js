@@ -1,8 +1,6 @@
 import { useCallback, useState } from "react";
 
 export const useHttp = () => {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
   const [process, setProcess] = useState("waiting");
 
   const request = useCallback(
@@ -12,7 +10,6 @@ export const useHttp = () => {
       body = null,
       headers = { "Content-Type": "aplication/json" }
     ) => {
-      setLoading(true);
       setProcess("loading");
 
       try {
@@ -22,11 +19,9 @@ export const useHttp = () => {
         if (!response.ok) {
           throw new Error(`Could not fetch ${url}, status: ${response.status}`);
         }
-        setLoading(false);
+
         return data;
       } catch (e) {
-        setLoading(false);
-        setError(e.massage);
         setProcess("error");
         throw e;
       }
@@ -35,9 +30,8 @@ export const useHttp = () => {
   );
 
   const clearError = useCallback(() => {
-    setError(null);
     setProcess("loading");
   }, []);
 
-  return { loading, clearError, request, error, process, setProcess };
+  return { clearError, request, process, setProcess };
 };
