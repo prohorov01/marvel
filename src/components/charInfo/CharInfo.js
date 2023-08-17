@@ -33,7 +33,7 @@ const CharInfo = (props) => {
 };
 
 const View = ({ data }) => {
-  const { name, description, thumbnail, homepage, wiki, comics } = data;
+  const { name, description, thumbnail, comics } = data;
 
   let imgStyle = { objectFit: "cover" };
   if (
@@ -49,14 +49,6 @@ const View = ({ data }) => {
         <img src={thumbnail} alt={name} style={imgStyle} />
         <div>
           <div className="char__info-name">{name}</div>
-          <div className="char__btns">
-            <a href={homepage} className="button button__main">
-              <div className="inner">homepage</div>
-            </a>
-            <a href={wiki} className="button button__secondary">
-              <div className="inner">Wiki</div>
-            </a>
-          </div>
         </div>
       </div>
       <div className="char__descr">{description}</div>
